@@ -4,41 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Owen Rex C. Polvera - Portfolio</title>
+  <meta name="description" content="Portfolio of Owen Rex C. Polvera - Computer Science graduate and aspiring IT professional skilled in CRM, SAP, programming, and IT support.">
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="RESPIC.jpg" type="image/jpg">
+
   <style>
+    /* Global styles */
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Fira Code', monospace;
       background-color: #121212;
       color: #e0e0e0;
+      line-height: 1.6;
     }
 
+    /* Header */
     header {
       text-align: center;
       padding: 50px 20px;
       background: linear-gradient(135deg, #00b894, #0984e3);
       color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-
     header img {
       width: 110px;
       height: 110px;
       border-radius: 50%;
-      border: 1.5px solid #fff;
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+      border: 2px solid #fff;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
       margin-bottom: 15px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     header img:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 16px rgba(0, 255, 255, 0.4);
+      box-shadow: 0 0 16px rgba(0, 255, 255, 0.5);
     }
 
+    /* Navigation */
     nav {
       margin-top: 20px;
     }
-
     nav a {
       color: #fff;
       margin: 0 12px;
@@ -46,11 +60,11 @@
       font-weight: bold;
       transition: color 0.3s ease;
     }
-
     nav a:hover {
       color: #ffeaa7;
     }
 
+    /* Sections */
     section {
       max-width: 800px;
       margin: 40px auto;
@@ -59,19 +73,18 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
-
     section h2 {
       color: #00cec9;
       margin-bottom: 20px;
       border-bottom: 1px solid #333;
       padding-bottom: 10px;
     }
-
     section h3 {
       margin-bottom: 10px;
       font-size: 16px;
     }
 
+    /* Skills */
     .skills span {
       display: inline-block;
       background-color: #2d3436;
@@ -81,16 +94,13 @@
       margin: 5px;
       font-size: 13px;
       transition: background 0.3s ease;
+      cursor: pointer;
     }
-
     .skills span:hover {
       background-color: #636e72;
     }
 
-    ul {
-      padding-left: 20px;
-    }
-
+    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
@@ -98,27 +108,24 @@
       color: #b2bec3;
       margin-top: 40px;
     }
-
-    a {
+    footer a {
       color: #81ecec;
       text-decoration: none;
     }
-
-    a:hover {
+    footer a:hover {
       text-decoration: underline;
     }
 
+    /* Responsive */
     @media (max-width: 600px) {
       header img {
         width: 90px;
         height: 90px;
       }
-
       nav a {
         display: block;
         margin: 10px 0;
       }
-
       section {
         padding: 20px;
       }
@@ -127,8 +134,9 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header>
-    <img src="RESPIC.jpg" alt="Owen Rex C. Polvera" />
+    <img src="RESPIC.jpg" alt="Portrait of Owen Rex C. Polvera" />
     <h1>Owen Rex C. Polvera</h1>
     <p>Computer Science Graduate | Aspiring IT Professional</p>
     <nav>
@@ -136,137 +144,117 @@
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
-      <a href="#Projects">Projects</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a Computer Science graduate with hands-on experience in IT support, CRM systems, SAP BusinessObjects, and digital design. In my role at Aqua Smartguard Corps, I manage client records in CRM, schedule technician visits for preventive maintenance, and monitor purifier parts in SAP to ensure accurate inventory tracking.
-    </p>
-    <p>
-      I applied my programming skills by designing digital forms using HTML and CSS, enabling automatic data capture and transfer into CRM and SAP for more efficient encoding. I also support other departments through basic computer troubleshooting.
-    </p>
-    <p>
-      I enjoy solving problems, streamlining processes, and creating solutions that improve both system performance and user experience.
-    </p>
-  </section>
+  <!-- About -->
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a Computer Science graduate with hands-on experience in IT support, CRM systems, SAP BusinessObjects, and digital design. In my role at Aqua Smartguard Corps, I managed client records in CRM, scheduled technician visits, and tracked purifier parts in SAP for accurate inventory.
+      </p>
+      <p>
+        I applied programming skills by designing digital forms using HTML and CSS, enabling automatic data capture and transfer into CRM and SAP. I also supported other departments through basic troubleshooting.
+      </p>
+      <p>
+        I enjoy solving problems, streamlining processes, and creating solutions that improve both system performance and user experience.
+      </p>
+    </section>
 
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <div style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+    <!-- Skills -->
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <div style="display: grid; gap: 20px;">
 
-      <!-- Programming & Web Development -->
-      <div>
-        <h3>💻 Programming & Web Development</h3>
-        <div style="display: flex; flex-wrap: wrap;">
+        <div>
+          <h3>💻 Programming & Web Development</h3>
           <span>HTML</span>
           <span>CSS</span>
-          <span>SQL Query Language</span>
+          <span>SQL</span>
           <span>MySQL</span>
           <span>Computer Science</span>
         </div>
-      </div>
 
-      <!-- IT & Technical Support -->
-      <div>
-        <h3>🛠️ IT & Technical Support</h3>
-        <div style="display: flex; flex-wrap: wrap;">
-          <span>Information Technology</span>
-          <span>IT Technical Support</span>
-          <span>Technical Assistance</span>
+        <div>
+          <h3>🛠️ IT & Technical Support</h3>
+          <span>Technical Support</span>
           <span>Troubleshooting</span>
-          <span>Network Troubleshooting</span>
-          <span>Computer Hardware</span>
-          <span>Installation</span>
-          <span>Service Desk</span>
+          <span>Network</span>
+          <span>Hardware</span>
           <span>Software Testing</span>
         </div>
-      </div>
 
-      <!-- Microsoft Ecosystem -->
-      <div>
-        <h3>🪟 Microsoft Ecosystem</h3>
-        <div style="display: flex; flex-wrap: wrap;">
-          <span>Microsoft Office</span>
-          <span>Microsoft Excel</span>
-          <span>Microsoft Word</span>
-          <span>Microsoft Windows</span>
+        <div>
+          <h3>🪟 Microsoft Ecosystem</h3>
+          <span>MS Office</span>
+          <span>Excel</span>
+          <span>Word</span>
+          <span>Windows</span>
         </div>
-      </div>
 
-      <!-- Business Tools -->
-      <div>
-        <h3>📊 Business Tools</h3>
-        <div style="display: flex; flex-wrap: wrap;">
-          <span>CRM Software</span>
+        <div>
+          <h3>📊 Business Tools</h3>
+          <span>CRM</span>
           <span>SAP BusinessObjects</span>
         </div>
-      </div>
 
-      <!-- Design & Media -->
-      <div>
-        <h3>🎨 Design & Media</h3>
-        <div style="display: flex; flex-wrap: wrap;">
-          <span>UI</span>
-          <span>UX</span>
-          <span>Digital Design</span>
+        <div>
+          <h3>🎨 Design & Media</h3>
+          <span>UI/UX</span>
           <span>Graphic Design</span>
-          <span>Print Production</span>
-          <span>Typesetting</span>
-          <span>Adobe Photoshop</span>
+          <span>Photoshop</span>
           <span>Canva</span>
-          <span>CapCut Video Editor</span>
+          <span>CapCut</span>
         </div>
-      </div>
 
-      <!-- Communication & Content -->
-      <div>
-        <h3>✍️ Communication & Content</h3>
-        <div style="display: flex; flex-wrap: wrap;">
+        <div>
+          <h3>✍️ Communication</h3>
           <span>Content Creation</span>
           <span>Social Media</span>
           <span>Email</span>
-          <span>Written English</span>
-          <span>Reading Skills</span>
+          <span>English Writing</span>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <p><strong>Aqua Smartguard Corp. (Jan – Jul 2025)</strong><br>Role: IT Intern</p>
+      <ul>
+        <li>Encoded data using CRM and SAP systems.</li>
+        <li>Handled document formatting and data entry.</li>
+        <li>Supported office operations and technical tasks.</li>
+      </ul>
+    </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <p><strong>Aqua Smartguard Corp. (Jan – Jul 2025)</strong><br>Role: IT Intern</p>
-    <ul>
-      <li>Encoded data using CRM and SAP systems.</li>
-      <li>Handled document formatting and data entry.</li>
-      <li>Supported daily office operations and technical tasks.</li>
-    </ul>
-  </section>
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>B.S. in Computer Science</strong><br>Our Lady of Fatima University, Lagro (2021–2025)</p>
+      <p><strong>STEM Strand</strong><br>Our Lady of Fatima University, Lagro (2019–2021)</p>
+      <p><strong>High School</strong><br>Maranatha Christian Academy, Caloocan (2014–2019)</p>
+    </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <p><strong>B.S. in Computer Science</strong><br>Our Lady of Fatima University, Lagro (2021–2025)</p>
-    <p><strong>STEM Strand - Senior High</strong><br>Our Lady of Fatima University, Lagro (2019–2021)</p>
-    <p><strong>High School</strong><br>Maranatha Christian Academy, Caloocan (2014–2019)</p>
-  </section>
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Coming soon... 🚀</p>
+    </section>
 
-  <section id="Projects">
-    <h2>Projects</h2>
-    <p><b>None as of the moment</b></p>
-  </section>
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>📍 Caloocan City (North)</p>
+      <p>📞 <a href="tel:+639812005702">+63 981-200-5702</a></p>
+      <p>💌 <a href="mailto:owenrexpolvera03@gmail.com">owenrexpolvera03@gmail.com</a></p>
+    </section>
+  </main>
 
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>📍 Caloocan City (NORTH)</p>
-    <p>📞 <a href="tel:+639812005702">+63 981-200-5702</a></p>
-    <p>💌 <a href="mailto:owenrexpolvera03@gmail.com">owenrexpolvera03@gmail.com</a></p>
-  </section>
-
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Owen Rex C. Polvera. All Rights Reserved.</p>
   </footer>
